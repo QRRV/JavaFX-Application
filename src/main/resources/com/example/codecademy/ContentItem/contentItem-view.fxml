@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.codecademy.contentItemController"
+            >
+    <VBox spacing="20" layoutX="20" layoutY="20">
+    <HBox alignment="CENTER" spacing="20" >
+        <ComboBox fx:id="courses" prefHeight="38.0" prefWidth="149.0" >
+
+        </ComboBox>
+        <ComboBox fx:id="students" prefHeight="38.0" prefWidth="149.0" >
+
+        </ComboBox>
+    </HBox>
+
+    <HBox  alignment="CENTER" spacing="20">
+        <Button layoutY="150"  onAction="#toMain" alignment="CENTER" text="Back" />
+        <Button layoutY="150" text="search" onAction="#searchContentItems" alignment="CENTER"/>
+        <Button layoutY="150" text="clear" onAction="#clearContentItems" alignment="CENTER"/>
+        <Button layoutY="150" text="Show Top 3 Viewed" onAction="#showTopViewed" alignment="CENTER"/>
+    </HBox>
+
+<HBox  spacing="20"  alignment="CENTER">
+<VBox>
+    <Text>Modules</Text>
+    <TableView fx:id="modules" >
+        <columns>
+            <TableColumn fx:id="mTitle" text="Title"/>
+            <TableColumn fx:id="mVersion"  text="Version"/>
+            <TableColumn fx:id="mDescription" text="Description"/>
+            <TableColumn  minWidth="150" fx:id="mEmailContactPerson"  text="Email Contact Person"/>
+            <TableColumn minWidth="150" fx:id="mPercentage"  text="Percentage Completed"/>
+        </columns>
+    </TableView>
+</VBox>
+    <VBox>
+    <Text>Webcasts</Text>
+    <TableView fx:id="webcasts">
+        <columns>
+            <TableColumn fx:id="wTitle"  text="Title"/>
+            <TableColumn fx:id="wURL"  text="URL"/>
+            <TableColumn fx:id="wDate"  text="Date"/>
+            <TableColumn fx:id="wNameSpeaker" text="Name Speaker"/>
+            <TableColumn fx:id="wOrganisation"  text="Organisation"/>
+            <TableColumn fx:id="wDescription" text="Description"/>
+            <TableColumn minWidth="150" fx:id="wPercentage"  text="Percentage Completed"/>
+        </columns>
+    </TableView>
+    </VBox>
+</HBox>
+    </VBox>
+
+</AnchorPane>

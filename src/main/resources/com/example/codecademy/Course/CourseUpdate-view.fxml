@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ComboBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.codecademy.courseController">
+   <children>
+      <AnchorPane layoutY="65.0" prefHeight="535.0" prefWidth="511.0">
+         <children>
+            <Label layoutY="-66.0" prefHeight="61.0" prefWidth="511.0" style="-fx-background-color: white;" text="            Wijzig Cursus" textFill="#172c90">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="38.0" prefHeight="38.0" prefWidth="101.0" text="Kies een course" />
+            <Label layoutX="46.0" layoutY="82.0" prefHeight="38.0" prefWidth="101.0" text="Course" />
+            <Label layoutX="46.0" layoutY="130.0" prefHeight="38.0" prefWidth="101.0" text=" Subject" />
+            <Label layoutX="46.0" layoutY="173.0" prefHeight="38.0" prefWidth="101.0" text=" Intro Text" />
+            <Label layoutX="46.0" layoutY="213.0" prefHeight="38.0" prefWidth="101.0" text=" Level" />
+            <Label layoutX="46.0" layoutY="262.0" prefHeight="38.0" prefWidth="101.0" text=" Interest" />
+            <ComboBox fx:id="cName" layoutX="194.0" layoutY="38.0" prefHeight="38.0" prefWidth="149.0" />
+            <TextField fx:id="newName" layoutX="194.0" layoutY="82.0" prefHeight="38.0" prefWidth="149.0" />
+            <TextField fx:id="sub" layoutX="194.0" layoutY="130.0" prefHeight="38.0" prefWidth="149.0" />
+            <TextField fx:id="introTxt" layoutX="194.0" layoutY="174.0" prefHeight="38.0" prefWidth="149.0" />
+            <TextField fx:id="lvl" layoutX="194.0" layoutY="219.0" prefHeight="38.0" prefWidth="149.0" />
+            <ComboBox fx:id="recCourse" layoutX="194.0" layoutY="263.0" prefHeight="38.0" prefWidth="149.0" />
+             <Button layoutX="270.0" layoutY="327.0" mnemonicParsing="false" onAction="#updateCourse" prefHeight="38.0" prefWidth="101.0" text="Bevestig" />
+            <Button layoutX="150.0" layoutY="327.0" mnemonicParsing="false" onAction="#BackToCourse" prefHeight="38.0" prefWidth="101.0" text="Terug" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

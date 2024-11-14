@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.codecademy.studentController">
+    <children>
+        <AnchorPane layoutY="65.0" prefHeight="535.0" prefWidth="511.0">
+            <children>
+                <Label layoutY="-66.0" prefHeight="61.0" prefWidth="511.0" style="-fx-background-color: white;" text="            Wijzig Student" textFill="#172c90">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="46.0" layoutY="38.0" prefHeight="38.0" prefWidth="101.0" text="Kies een student" />
+                <Label layoutX="46.0" layoutY="82.0" prefHeight="38.0" prefWidth="101.0" text="Emailadres" />
+                <Label layoutX="46.0" layoutY="130.0" prefHeight="38.0" prefWidth="101.0" text="Naam" />
+                <Label layoutX="46.0" layoutY="173.0" prefHeight="38.0" prefWidth="101.0" text="Geboortedatum" />
+                <Label layoutX="46.0" layoutY="213.0" prefHeight="38.0" prefWidth="101.0" text="Geslacht" />
+                <ComboBox fx:id="studentBox" layoutX="194.0" layoutY="38.0" prefHeight="38.0" prefWidth="149.0" />
+                <TextField fx:id="newEmail" layoutX="194.0" layoutY="82.0" prefHeight="38.0" prefWidth="149.0" />
+                <TextField fx:id="newName" layoutX="194.0" layoutY="130.0" prefHeight="38.0" prefWidth="149.0" />
+                <TextField fx:id="newBirthday" layoutX="194.0" layoutY="174.0" prefHeight="38.0" prefWidth="149.0" />
+                <ComboBox fx:id="newGender" prefWidth="149.0" prefHeight="38.0" layoutX="194.0" layoutY="213.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Man"/>
+                            <String fx:value="Vrouw"/>
+                            <String fx:value="Overig"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button layoutX="270.0" layoutY="300.0" mnemonicParsing="false" onAction="#updateStudent" prefHeight="38.0" prefWidth="101.0" text="Bevestig" />
+                <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" onAction="#toStudent" prefHeight="38.0" prefWidth="101.0" text="Terug" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

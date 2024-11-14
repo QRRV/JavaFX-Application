@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.codecademy.HelloController">
+<left>
+    <VBox spacing="5" fx:id="buttonVBox" minWidth="120" alignment="TOP_CENTER">
+        <Text></Text>
+        <Button fx:id="bCourse" minHeight="50" minWidth="100" text="Course" onAction="#toCourse"/>
+        <Button fx:id="bStudent" minHeight="50" minWidth="100" text="Student" onAction="#toStudent" />
+        <Button fx:id="bContentItem" minHeight="50" minWidth="100" text="ContentItem" onAction="#toContentItem"/>
+        <Button fx:id="bRegistration" minHeight="50" minWidth="100" text="Registration" onAction="#toRegistration"/>
+        <Button fx:id="bAddress" minHeight="50" minWidth="100" text="Address" onAction="#toAddress"/>
+        <Button fx:id="bCertificate" minHeight="50" minWidth="100" text="Certificate" onAction="#certificateBtn"/>
+    </VBox>
+</left>
+    <VBox alignment="TOP_CENTER" layoutX="350" layoutY="20" spacing="20">
+        <Text fx:id="titleText">Certificaat Behaald Per Geslacht</Text>
+        <ComboBox fx:id="gender" minWidth="100">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Man"/>
+                    <String fx:value="Vrouw"/>
+                    <String fx:value="Overig"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <PieChart id="piechart" fx:id="piechart" minWidth="500" minHeight="500" />
+    </VBox>
+
+</BorderPane>
+  

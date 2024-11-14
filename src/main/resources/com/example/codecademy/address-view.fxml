@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.codecademy.addressController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label text="Address" alignment="CENTER" >
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Label>
+    <HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+        <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+        </padding>
+        <Button text="Terug" onAction="#toMain"/>
+    </HBox>
+
+    <TableView fx:id="tableView" prefWidth="600" maxWidth="1000">
+        <columns>
+            <TableColumn fx:id="eMail" prefWidth="250" text="Emailadres"/>
+            <TableColumn fx:id="streetName" prefWidth="150" text="Straat naam"/>
+            <TableColumn fx:id="houseNumber" prefWidth="100" text="Huisnummer"/>
+            <TableColumn fx:id="houseNumberAdd" prefWidth="100" text="Toevoeging"/>
+            <TableColumn fx:id="zipCode" prefWidth="100" text="Postcode"/>
+            <TableColumn fx:id="city" prefWidth="150" text="Stad"/>
+            <TableColumn fx:id="country" prefWidth="150" text="Land"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.codecademy.courseController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label text="Course" alignment="CENTER" >
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Label>
+    <HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+        <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+        </padding>
+        <Button text="Terug" onAction="#toMain"/>
+        <Button text="Create" onAction="#toCreate"/>
+        <Button text="Bewerk" onAction="#toUpdate"/>
+        <Button text="Verwijder" onAction="#deleteCourse"/>
+    </HBox>
+    
+    <TableView fx:id="tableView" prefWidth="885" maxWidth="885" prefHeight="200" maxHeight="200">
+        <columns>
+            <TableColumn fx:id="courseName" prefWidth="150" text="Naam"/>
+            <TableColumn fx:id="subject" prefWidth="150" text="Subject"/>
+            <TableColumn fx:id="status" prefWidth="125" text="Level"/>
+            <TableColumn fx:id="introductionText" prefWidth="185" text="Intro text"/>
+            <TableColumn fx:id="recommendedCourse" prefWidth="150" text="Recommended"/>
+            <TableColumn fx:id="timesCompleted" prefWidth="125" text="Keren behaald"/>
+        </columns>
+    </TableView>
+
+    <Label text="Top completed Courses" alignment="CENTER" >
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="topCompletedCourseTableView" prefWidth="610" maxWidth="610" prefHeight="110" maxHeight="110">
+        <columns>
+            <TableColumn fx:id="topCourseName" prefWidth="150" text="Naam"/>
+            <TableColumn fx:id="topSubject" prefWidth="150" text="Subject"/>
+            <TableColumn fx:id="topStatus" prefWidth="125" text="Level"/>
+            <TableColumn fx:id="topIntroductionText" prefWidth="185" text="Intro text"/>
+        </columns>
+    </TableView>
+</VBox>
